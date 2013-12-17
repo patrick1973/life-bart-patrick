@@ -26,5 +26,11 @@ public class OmnivoorGedrag implements IGedrag {
     public void eet(int hoeveelheid) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void eetPlant(Plant plant) {
+        plant.gegetenWorden(20);
+    }
+    
     
 }

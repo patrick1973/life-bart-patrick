@@ -11,4 +11,5 @@ package beesttest;
 public interface IGedrag {
     public String getType();
     public void eet(int hoeveelheid);
+    public void eetPlant(Plant plant);
 }
