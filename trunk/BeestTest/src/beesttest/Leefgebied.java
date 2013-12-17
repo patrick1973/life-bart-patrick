@@ -12,10 +12,14 @@ public class Leefgebied {
 
     public Leefgebied() {
         
+        Plant plant = new Plant(150);
+        
         IGedrag g = new OmnivoorGedrag("");
         
         Beest beest = new Beest(g);
         
         beest.gedrag.eet(10);
+        
+        beest.gedrag.eetPlant(plant);
     }
 }
