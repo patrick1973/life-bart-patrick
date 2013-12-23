@@ -4,17 +4,16 @@
  */
 package Models;
 
-import Views.MainView;
+import Views.MainViewFrame;
 import java.util.Observable;
 
 /**
  *
  * @author Bart Janisse
  */
-public class MainModel extends Observable {
+public class SimulatieModel extends Observable {
     
-    public MainModel() {
+    public SimulatieModel() {
         
     }
-    
 }
