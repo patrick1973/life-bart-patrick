@@ -4,6 +4,8 @@
  */
 package Views;
 
+import Models.SimulatieModel;
+import Models.Wereld;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -45,6 +47,11 @@ public class SimulatieView extends javax.swing.JPanel implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        SimulatieModel model = (SimulatieModel)o;
+        
+        Wereld w = model.getWereld();
+        
+        
     }
 }

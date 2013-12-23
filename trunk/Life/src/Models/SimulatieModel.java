@@ -10,9 +10,18 @@ import java.util.Observable;
  *
  * @author Bart Janisse
  */
-public class SimulatieModel extends Observable {
-    
-    public SimulatieModel() {
+public class SimulatieModel extends Observable 
+{     
+    private Wereld wereld;
+     
+    public SimulatieModel() 
+    {
         
     }
+    
+    public Wereld getWereld()
+    {
+        return this.wereld;
+    }
+    
 }
