@@ -12,6 +12,7 @@ public class Beest {
 
     IGedrag gedrag;
     
+    
     public Beest(IGedrag g) {
         this.gedrag = g;
     }
