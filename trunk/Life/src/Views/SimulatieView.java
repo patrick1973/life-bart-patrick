@@ -48,9 +48,10 @@ public class SimulatieView extends javax.swing.JPanel implements Observer{
     @Override
     public void update(Observable o, Object arg) {
         
-        SimulatieModel model = (SimulatieModel)o;
+        SimulatieModel model = (SimulatieModel)arg;
         
         Wereld w = model.getWereld();
+        
         
         
     }

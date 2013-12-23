@@ -24,8 +24,11 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
         initComponents();
         
         model = new SimulatieModel();
+        
         simulatieController2.setModel(this.model);
         this.model.addObserver(simulatieView1);
+        
+        
     }
 
       
