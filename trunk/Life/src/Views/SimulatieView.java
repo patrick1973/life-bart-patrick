@@ -4,11 +4,14 @@
  */
 package Views;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  *
  * @author Bart Janisse
  */
-public class SimulatieView extends javax.swing.JPanel {
+public class SimulatieView extends javax.swing.JPanel implements Observer{
 
     /**
      * Creates new form SimulatieView
@@ -39,4 +42,9 @@ public class SimulatieView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void update(Observable o, Object arg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

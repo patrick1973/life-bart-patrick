@@ -4,7 +4,6 @@
  */
 package Models;
 
-import Views.MainViewFrame;
 import java.util.Observable;
 
 /**
