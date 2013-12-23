@@ -4,12 +4,19 @@
  */
 package Views;
 
+import Models.MainModel;
+import java.awt.image.ImageObserver;
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  *
  * @author Bart Janisse
  */
-public class MainView extends javax.swing.JFrame {
+public class MainView extends javax.swing.JFrame implements Observer {
 
+    private MainModel model;
+    
     /**
      * Creates new form MainView
      */
@@ -17,6 +24,10 @@ public class MainView extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void setModel(MainModel model) {
+        this.model = model;
+    }    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,11 +43,11 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 522, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 355, Short.MAX_VALUE)
         );
 
         pack();
@@ -70,12 +81,17 @@ public class MainView extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainView().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new MainView().setVisible(true);
+//            }
+//        });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void update(Observable o, Object arg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
