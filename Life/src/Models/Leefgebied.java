@@ -10,8 +10,9 @@ package Models;
  */
 public class Leefgebied {
 
-    public Leefgebied() {
-        
+    public Leefgebied(int obstakels, int planten, int carnivoren, int omnivoren, int herbivoren, int nonivoren) 
+    {
        
+         
     }
 }

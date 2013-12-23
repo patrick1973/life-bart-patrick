@@ -24,4 +24,12 @@ public class SimulatieModel extends Observable
         return this.wereld;
     }
     
+    public void setWereld(Wereld w)
+    {
+        this.wereld = w;
+        
+        this.setChanged();
+        this.notifyObservers(w);
+    }
+    
 }
