@@ -6,6 +6,7 @@ package Views;
 
 import Models.SimulatieModel;
 import Models.Wereld;
+import java.awt.Color;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -14,12 +15,14 @@ import java.util.Observer;
  * @author Bart Janisse
  */
 public class SimulatieView extends javax.swing.JPanel implements Observer{
-
+  
     /**
      * Creates new form SimulatieView
      */
     public SimulatieView() {
         initComponents();
+        this.setBackground(Color.blue);
+             
     }
 
     /**
@@ -31,18 +34,29 @@ public class SimulatieView extends javax.swing.JPanel implements Observer{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+
+        jTextField1.setText("jTextField1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(447, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(397, 397, 397))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(251, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -51,8 +65,7 @@ public class SimulatieView extends javax.swing.JPanel implements Observer{
         SimulatieModel model = (SimulatieModel)arg;
         
         Wereld w = model.getWereld();
-        
-        
-        
+               
     }
+    
 }
