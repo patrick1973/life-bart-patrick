@@ -34,22 +34,48 @@ public class SimulatieController extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnLoadSimulation = new javax.swing.JButton();
+        btnSaveSimultation = new javax.swing.JButton();
+        btnStartSimulation = new javax.swing.JButton();
+        btnNewSimulation = new javax.swing.JButton();
+        btnPauzeSimulation = new javax.swing.JButton();
+        btnExitSimulation = new javax.swing.JButton();
+        jSliderSimulationSpeed = new javax.swing.JSlider();
+        jLabel1 = new javax.swing.JLabel();
 
-        jButton1.setText("Load simulatie");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnLoadSimulation.setText("Load simulatie");
+        btnLoadSimulation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnLoadSimulationActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Save simulatie");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnSaveSimultation.setText("Save simulatie");
+        btnSaveSimultation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSaveSimultationActionPerformed(evt);
             }
         });
+
+        btnStartSimulation.setText("Start simulatie");
+
+        btnNewSimulation.setText("Nieuwe simulatie");
+
+        btnPauzeSimulation.setText("Pauze simulatie");
+
+        btnExitSimulation.setText("Exit ");
+        btnExitSimulation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitSimulationActionPerformed(evt);
+            }
+        });
+
+        jSliderSimulationSpeed.setValue(0);
+        jSliderSimulationSpeed.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText(" Simulatie snelheid ");
+        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -57,40 +83,79 @@ public class SimulatieController extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnSaveSimultation, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                    .addComponent(btnLoadSimulation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnPauzeSimulation, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                    .addComponent(btnStartSimulation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnExitSimulation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNewSimulation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jSliderSimulationSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addContainerGap(98, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnLoadSimulation)
+                            .addComponent(btnNewSimulation)
+                            .addComponent(btnStartSimulation))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPauzeSimulation)
+                            .addComponent(btnSaveSimultation)
+                            .addComponent(btnExitSimulation)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSliderSimulationSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnLoadSimulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadSimulationActionPerformed
         // TODO add your handling code here:
         
         Opslag opslag = new Opslag();
         
         model.setWereld(opslag.LoadWereld());
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnLoadSimulationActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnSaveSimultationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveSimultationActionPerformed
         // TODO add your handling code here:
         
         Opslag opslag = new Opslag();
         
         opslag.SaveWereld(model.getWereld());
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnSaveSimultationActionPerformed
+
+    private void btnExitSimulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitSimulationActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_btnExitSimulationActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnExitSimulation;
+    private javax.swing.JButton btnLoadSimulation;
+    private javax.swing.JButton btnNewSimulation;
+    private javax.swing.JButton btnPauzeSimulation;
+    private javax.swing.JButton btnSaveSimultation;
+    private javax.swing.JButton btnStartSimulation;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSlider jSliderSimulationSpeed;
     // End of variables declaration//GEN-END:variables
 }
