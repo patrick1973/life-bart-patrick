@@ -8,6 +8,7 @@ import Models.SimulatieModel;
 import java.awt.image.ImageObserver;
 import java.util.Observable;
 import java.util.Observer;
+import javax.swing.JFrame;
 
 /**
  *
@@ -23,6 +24,11 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
     public MainViewFrame() {
         initComponents();
         
+        /*
+        * door dee regel hier toe te voegen wordt tijdens het opstarten het 
+        * scherm op maximale grote gezet. onafhankelijk van de resoluitie;
+        */
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         model = new SimulatieModel();
         
         simulatieController2.setModel(this.model);
@@ -46,6 +52,9 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
         simulatieController2 = new Views.SimulatieController();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Life 2013 ");
+        setPreferredSize(new java.awt.Dimension(800, 500));
+        setResizable(false);
 
         javax.swing.GroupLayout simulatieView1Layout = new javax.swing.GroupLayout(simulatieView1);
         simulatieView1.setLayout(simulatieView1Layout);
@@ -55,8 +64,10 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
         );
         simulatieView1Layout.setVerticalGroup(
             simulatieView1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
+            .addGap(0, 359, Short.MAX_VALUE)
         );
+
+        simulatieController2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,7 +77,7 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(simulatieView1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(simulatieController2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
+                    .addComponent(simulatieController2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -75,8 +86,7 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
                 .addContainerGap()
                 .addComponent(simulatieView1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(simulatieController2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addComponent(simulatieController2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
