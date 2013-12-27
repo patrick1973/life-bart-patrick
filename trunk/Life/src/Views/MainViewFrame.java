@@ -5,7 +5,6 @@
 package Views;
 
 import Models.SimulatieModel;
-import java.awt.image.ImageObserver;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.JFrame;
