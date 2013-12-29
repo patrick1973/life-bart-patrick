@@ -24,7 +24,7 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
         initComponents();
         
         /*
-        * door dee regel hier toe te voegen wordt tijdens het opstarten het 
+        * door deze regel hier toe te voegen wordt tijdens het opstarten het 
         * scherm op maximale grote gezet. onafhankelijk van de resoluitie;
         */
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);

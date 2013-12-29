@@ -15,13 +15,23 @@ import Views.MainViewFrame;
  *
  * @author Bart Janisse
  */
-public class SimulatieController {
+public class SimulatieController  {
 
     
     SimulatieModel main;
     MainViewFrame view;
+    Thread thread = new Thread();
+    /**
+     * 1 thread per beest of 1 thread per simulatie????
+     */
+
     /**
      * @param args the command line arguments
      */
+    public SimulatieController()
+    {
+        thread.start();
+    }
+
 
 }
