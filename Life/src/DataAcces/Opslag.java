@@ -5,7 +5,7 @@
 package DataAcces;
 
 import Models.Wereld;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+//import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  *
@@ -18,11 +18,13 @@ public class Opslag {
     
     public void SaveWereld(Wereld w)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public Wereld LoadWereld()
     {
-        throw new NotImplementedException();
+       // throw new NotImplementedException();
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
