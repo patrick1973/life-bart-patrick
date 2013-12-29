@@ -48,7 +48,7 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
     private void initComponents() {
 
         simulatieView1 = new Views.SimulatieView();
-        simulatieController2 = new Views.SimulatieController();
+        simulatieController2 = new Views.SimulatieControllerView();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Life 2013 ");
@@ -126,7 +126,7 @@ public class MainViewFrame extends javax.swing.JFrame implements Observer {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Views.SimulatieController simulatieController2;
+    private Views.SimulatieControllerView simulatieController2;
     private Views.SimulatieView simulatieView1;
     // End of variables declaration//GEN-END:variables
 

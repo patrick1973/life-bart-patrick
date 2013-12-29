@@ -62,7 +62,7 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="Views.SimulatieController" name="simulatieController2">
+    <Component class="Views.SimulatieControllerView" name="simulatieController2">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
