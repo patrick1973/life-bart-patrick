@@ -22,6 +22,7 @@ public class SimulatieView extends javax.swing.JPanel implements Observer{
     public SimulatieView() {
         initComponents();
         this.setBackground(Color.blue);
+        
              
     }
 
